@@ -64,7 +64,7 @@ app.post("/api/bookings", async (req, res) => {
         currency: "INR",
         receipt: `receipt_${Date.now()}`,
       };
-  
+   
       const order = await razorpay.orders.create(options);
       res.json({ success: true, order });
     } catch (error) {
